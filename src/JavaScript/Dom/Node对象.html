@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node</title>
+    <style>
+        div{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+        }
+        #div3{
+            color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">div2</div>
+    div1
+</div>
+<a href="javascript:void(0);" id="del">删除节点</a>
+<a href="javascript:void(0);" id="add">添加节点</a>
+<script>
+    let div_1 = document.getElementById("div1");
+    let div_2 = document.getElementById("div2");
+    let del = document.getElementById("del");
+    del.onclick = function () {
+        div_1.removeChild(div_2);
+    }
+    let add = document.getElementById("add");
+    add.onclick = function () {
+        let div_3 = document.createElement("div");
+        div_3.setAttribute("id","div3");
+        div_3.innerHTML = "div3";
+        div_1.appendChild(div_3);
+    }
+</script>
+</body>
+</html>

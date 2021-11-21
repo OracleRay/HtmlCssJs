@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+  <script>
+    let reg1 = new RegExp("^\\w{6,12}$");
+    let reg2 = /^\w{6,12}$/;                   // ^为开始符，$为结束符，\w为单词字符，{}为出现次数
+
+    let username = "zhangsan";
+    let falg = reg1.test(username);
+    alert(falg);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

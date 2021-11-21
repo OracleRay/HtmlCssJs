@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格_全选</title>
+    <style>
+        table{
+            border: 1px solid;
+            text-align: center;
+            margin: auto;
+        }
+        td{
+            border: 1px solid;
+            width: 100px;
+            height: 25px;
+        }
+        p,div{
+            text-align: center;
+            margin: 50px;
+        }
+        #input{
+            margin: auto;
+
+        }
+        .over{
+            background-color: red;
+        }
+        .leave{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div>
+<label>
+    <input type="text" placeholder="请输入编号" id="id">
+</label>
+<label>
+    <input type="text" placeholder="请输入姓名" id="name">
+</label>
+<label>
+    <input type="text" placeholder="请输入性别" id="sex">
+</label>
+<input type="button" value="添加" id="add">
+</div>
+<p>学生信息表</p>
+<table>
+    <tr>
+        <th><input type="checkbox" name="cb" id="cbFirst"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td>
+            <a href="javascript:void(0);" onclick="delTr(this);">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>2</td>
+        <td>现场先</td>
+        <td>男</td>
+        <td>
+            <a href="javascript:void(0);" onclick="delTr(this);">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>3</td>
+        <td>水岸方</td>
+        <td>女</td>
+        <td>
+            <a href="javascript:void(0);" onclick="delTr(this);">删除</a>
+        </td>
+    </tr>
+</table>
+<br>
+<div id="input">
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="selectNull" value="取消">
+    <input type="button" value="反选" id="selectReverse">
+</div>
+<script>
+    document.getElementById("add").onclick = function () {                     //innerHtml方法
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let sex = document.getElementById("sex").value;
+
+        let table = document.getElementsByTagName("table")[0];
+
+        table.innerHTML += "<tr>" +
+            "        <td>"+
+                        "<input type=\"checkbox\" name=\"cb\" id=\"cbFirst\">" +
+                     "</td>" +
+            "        <td>"+id+"</td>" +
+            "        <td>"+name+"</td>" +
+            "        <td>"+sex+"</td>" +
+            "        <td>" +
+            "            <a href=\"javascript:void(0);\" onclick=\"delTr(this);\">删除</a>" +
+            "        </td>" +
+            "    </tr>";
+
+    }
+    function delTr(object) {
+        let table = object.parentNode.parentNode.parentNode;
+        let tr = object.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+    window.onload = function (){
+        document.getElementById("selectAll").onclick = function (){           //全选
+            let cbs = document.getElementsByName("cb");
+            for (let i = 0; i < cbs.length; i++) {
+                cbs[i].checked = true;
+            }
+        }
+        document.getElementById("selectNull").onclick = function (){           //取消
+            let cbs = document.getElementsByName("cb");
+            for (let i = 0; i < cbs.length; i++) {
+                cbs[i].checked = false;
+            }
+        }
+        document.getElementById("selectReverse").onclick = function (){           //反选
+            let cbs = document.getElementsByName("cb");
+            for (let i = 0; i < cbs.length; i++) {
+                cbs[i].checked = !cbs[i].checked;
+            }
+        }
+        document.getElementById("cbFirst").onclick = function (){
+            let cbs = document.getElementsByName("cb");
+            for (let i = 1; i < cbs.length; i++) {
+                cbs[i].checked = this.checked;
+            }
+        }
+        let trs = document.getElementsByTagName("tr");
+        for (let i = 0; i < trs.length; i++) {
+            trs[i].onmouseover = function (){
+                this.className = "over";
+            }
+            trs[i].onmouseout = function (){
+                this.className = "leave";
+            }
+        }
+    }
+</script>
+</body>
+</html>

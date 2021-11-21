@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+<img src="../img/banner_1.jpg" id="banner1">
+<script>
+    let banner = document.getElementById("banner1");
+    let i = 1;
+    function fun(){
+        i++;
+        if(i > 3) {
+            i = 1;
+        }
+        banner.src = "../img/banner_"+ i +".jpg";
+    }
+    setInterval(fun,500);
+</script>
+</body>
+</html>

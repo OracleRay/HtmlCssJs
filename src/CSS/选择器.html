@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        /*基础选择器*/
+        #div1{
+            color: gold;
+        }
+        div{
+            color: red;
+        }
+        .wdnmd{
+            color: aqua;                  /*优先级最高*/
+        }
+        /*扩展选择器*/
+        div p{
+            color: brown;
+        }
+        div > p{
+            border: 1px solid;
+        }
+        input[type="text"]{
+            border: 5px solid;
+        }
+        a:link{
+            color: dimgrey;                    //初始化状态
+        }
+        a:hover{
+            color: red;                      //鼠标悬浮状态
+        }
+        a:active{
+            color: aqua;                     //正在访问状态
+        }
+        a:visited{
+            color: rebeccapurple;                 //被访问过后状态
+        }
+    </style>
+</head>
+<body>
+<div id="div1">我带你们打</div>
+<div>我也带你们打</div>
+<div class="wdnmd">哈哈哈哈哈哈哈</div>
+<div>
+    <p>
+        安居客了斯蒂芬干哈上课的计划发给额我热
+    </p>
+</div>
+<input type="text">
+<br>
+<a href="https://www.baidu.com">百度首页</a>
+</body>
+</html>

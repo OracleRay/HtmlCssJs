@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element</title>
+</head>
+<body>
+<a>百度</a>
+<input id="btn_set" type="button" value="设置属性">
+<input id="btn_remove" type="button" value="删除属性">
+<script>
+    let a = document.getElementsByTagName("a")[0];
+    let btn_set = document.getElementById("btn_set");
+    btn_set.onclick = function (){
+        a.setAttribute("href","https://www.baidu.com");
+    }
+    let btn_remove = document.getElementById("btn_remove");
+    btn_remove.onclick = function () {
+        a.removeAttribute("href");
+    }
+</script>
+</body>
+</html>

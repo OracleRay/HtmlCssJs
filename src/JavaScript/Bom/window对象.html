@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+</head>
+<body>
+<input id="openBtn" type="button" value="打开百度">
+<input id="closeBtn" type="button" value="关闭百度">
+<script>
+  let confirm = window.confirm("确定退出？");
+  if(confirm){
+      window.alert("欢迎下次光临！");
+  }else{
+      window.alert("我丢！");
+  }
+  let usename = window.prompt("请输入用户名：");
+  alert(usename);
+
+  let openBtn = document.getElementById("openBtn");
+  let closeBtn = document.getElementById("closeBtn");
+  let newWindow;
+  openBtn.onclick = function (){
+      newWindow = open("https://baidu.com");
+  }
+  closeBtn.onclick = function (){
+      newWindow.close();                                  //谁调用关闭谁
+  }
+  function fun(){
+      alert("我裂开了！");
+  }
+  setTimeout(fun,2000);                            //出现一次
+  setInterval(fun,3000);                         //循环出现
+</script>
+</body>
+</html>

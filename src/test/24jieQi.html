@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二十四节气</title>
+    <style>
+        body{
+            background: url("img/background.jpg") fixed no-repeat;
+            background-size: 100% 100%;
+        }
+        .header{
+            margin: 3px auto;
+        }
+        table{
+            width: 900px;
+            margin: auto;
+            table-layout: fixed;
+        }
+        #biaoti{
+            margin: 1px auto;
+            width: 900px;
+            padding: 0px;
+        }
+        #biaoti > li{
+            list-style-type: none;
+            float: left;
+        }
+        .daohang a:hover{
+            background-color: #2f6f4f;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .daohang li a{
+            display: block;
+            width: 150px;
+            height: 30px;
+            font-family: Microsoft Yahei;
+            line-height: 30px;
+            background-color: goldenrod;
+            margin: 0px 0px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .biaoti{
+            background-color: goldenrod;
+            height: 30px;
+        }
+        .more{
+            float: right;
+        }
+        .text{
+            border: goldenrod solid 2px;
+        }
+        div > img{
+            border: solid 5px gray;
+            border-radius: 5px;
+            width: 130px;
+            height: 100px;
+        }
+        #banquan{
+            text-align: center;
+            padding-top: 20px;
+            background-color: goldenrod;
+            height: 60px;
+        }
+        video{
+            width: 590px;
+            height: 350px;
+        }
+        .story ul li{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <!--header区-->
+    <tr>
+        <td colspan="3"  class="header">
+            <img src="img/China.png" width="50" height="50">
+            <span>
+                <p class="more">
+                    <a href="#">关于我们</a>
+                    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    <a href="#">联系我们</a>
+                </p>
+            </span>
+        </td>
+    </tr>
+    <!--导航区-->
+    <tr>
+        <td colspan="3">
+            <ul id="biaoti" class="daohang">
+                <li><a href="">首页</a></li>
+                <li><a href="">二十四节气</a></li>
+                <li><a href="">节气故事</a></li>
+                <li><a href="">历史溯源</a></li>
+                <li><a href="">交流论坛</a></li>
+                <li><a href="">意见建议</a></li>
+            </ul>
+        </td>
+    </tr>
+    <!--banner区-->
+    <tr>
+        <td colspan="3">
+            <img src="img/qiufen.jpg" width="900" height="300">
+        </td>
+    </tr>
+    <tr>
+        <td class="biaoti">秋分介绍<span class="more"><a href="#">MORE>></a></span></td>
+        <td class="biaoti">秋分故事<span class="more"><a href="#">MORE>></a></span></td>
+        <td class="biaoti">秋分习俗<span class="more"><a href="#">MORE>></a></span></td>
+    </tr>
+    <!--内容-->
+    <tr>
+        <td class="text">
+            <p>
+                秋分，是二十四节气之第十六个节气，秋季第四个节气。斗指酉；太阳达黄经180°；于每年的公历9月22-24日交节。
+                秋分这天太阳几乎直射地球赤道，全球各地昼夜等长 [16]  。秋分，“分”即为“平分”、“半”的意思，除了指昼夜平分外，
+                还有一层意思是平分了秋季。秋分日后，太阳光直射位置南移，北半球昼短夜长，昼夜温差加大，气温逐日下降。
+            </p>
+        </td>
+        <td class="text">
+            <div class="story">
+                <ul>
+                    <li><a href="#">秋分的由来</a></li>
+                    <li><a href="#">秋分的传统习俗</a></li>
+                    <li><a href="#">秋分的农事活动</a></li>
+                    <li><a href="#">相关文学作品</a></li>
+                    <li><a href="#">秋分时的气象变化</a></li>
+                    <li><a href="#">天文历法</a></li>
+                </ul>
+            </div>
+        </td>
+        <td rowspan="3" class="text">
+            <div>
+                <img src="img/xisu1.webp">
+                <img src="img/xisu2.jpg">
+                <img src="img/xisu3.webp">
+                <img src="img/xisu4.jpg">
+                <img src="img/xisu1.webp">
+                <img src="img/xisu2.jpg">
+                <img src="img/xisu3.webp">
+                <img src="img/xisu4.jpg">
+                <img src="img/xisu1.webp">
+                <img src="img/xisu2.jpg">
+                <img src="img/xisu3.webp">
+                <img src="img/xisu4.jpg">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="biaoti" class="text">视频话秋分<span class="more"><a href="#">MORE>></a></span></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <video src="video/qiufen.mp4" controls></video>
+        </td>
+    </tr>
+    <!--版权信息-->
+    <tr>
+        <td colspan="3">
+            <p id="banquan">
+                地址：内蒙古农业大学计算机与信息工程学院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                邮编：010010<br>
+                版权所有&copy;：内蒙古农业大学计算机与信息工程学院&nbsp;&nbsp;&nbsp;&nbsp;雷东宸
+            </p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
